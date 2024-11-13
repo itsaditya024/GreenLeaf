@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLeaf</title>
+    <link rel="icon" href="image/logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- header -->
+        <header>
+            <div class="logo-container">
+                <h1><i class="fa-solid fa-leaf"></i> GreenLeaf</h1>
+            </div>
+            <!-- nav -->
+            <div class="nav-area">
+                <!-- searching -->
+                <div class="search-box" tabindex="0">
+                    <input type="text" id="search-bar" placeholder="Search">
+                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>	
+                </div>
+                <div id="results"></div>
+                <!-- cart btn -->
+                <button class="cart-btn" id="view-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </button>
+                <!-- sign-in btn -->
+                <button class="account-btn">
+                    <a href="signin.html"><i class="fa-solid fa-user"></i></a>
+                </button>
+            </div>
+        </header>
+
+        <!-- main -->
+        <main>
+            <!-- hero -->
+            <div class="hero-section">
+                <div class="banner-img">
+                    <div class="banner-text">
+                        <h3>our story</h3>
+                        <p><i class="fa-solid fa-quote-left"></i> GreenLeaf, founded by Aditya, is Satna's go-to plant destination, promoting green urban living with a range of plants and expert care tips. Join us in making Satna greener, one plant at a time! <i class="fa-solid fa-quote-right"></i></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- nursery -->
+            <div class="shop-section">
+                <h2>our popular plants</h2>
+                <div class="shop-section-box" data-id="1">
+                    <div class="shop-section-box-img">
+                        <img src="image/money-plant.webp">
+                    </div>
+                    <div class="shop-section-box-text">
+                        <h2>money plant</h2>
+                        <p class="p1">₹249</p>
+                        <p class="p2"><b>₹189</b></p>
+                        <i onclick="showDetails('product1')" class="fa-regular fa-eye product"></i>
+                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
+                    </div>
+                </div>
+                <div class="shop-section-box" data-id="2">
+                    <div class="shop-section-box-img">
+                        <img src="image/snake-plant.webp">
+                    </div>
+                    <div class="shop-section-box-text">
+                        <h2>snake plant</h2>
+                        <p class="p1">₹289</p>
+                        <p class="p2"><b>₹179</b></p>
+                        <i onclick="showDetails('product2')" class="fa-regular fa-eye product"></i>
+                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
+                    </div>
+                </div>
+                <div class="shop-section-box" data-id="3">
+                    <div class="shop-section-box-img">
+                        <img src="image/aleo-vera-plants.webp">
+                    </div>
+                    <div class="shop-section-box-text">
+                        <h2>aleo vera plant</h2>
+                        <p class="p1">₹249</p>
+                        <p class="p2"><b>₹159</b></p>
+                        <i onclick="showDetails('product3')" class="fa-regular fa-eye product"></i>
+                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
+                    </div>
+                </div>
+
+                <div class="shop-section-box" data-id="4">
+                    <div class="shop-section-box-img">
+                        <img src="image/zz-plant.webp">
+                    </div>
+                    <div class="shop-section-box-text">
+                        <h2>ZZ plant</h2>
+                        <p class="p1">₹449</p>
+                        <p class="p2"><b>₹299</b></p>
+                        <i onclick="showDetails('product4')" class="fa-regular fa-eye product"></i>
+                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
+                    </div>
+                </div>
+                <div class="shop-section-box" data-id="5">
+                    <div class="shop-section-box-img">
+                        <img src="image/spider-plant.webp">
+                    </div>
+                    <div class="shop-section-box-text">
+                        <h2>spider plant</h2>
+                        <p class="p1">₹349</p>
+                        <p class="p2"><b>₹269</b></p>
+                        <i onclick="showDetails('product5')" class="fa-regular fa-eye product"></i>
+                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
+                    </div>
+                </div>
+                <div class="shop-section-box" data-id="6">
+                    <div class="shop-section-box-img">
+                        <img src="image/jade-plant.webp">
+                    </div>
+                    <div class="shop-section-box-text">
+                        <h2>jade plant</h2>
+                        <p class="p1">₹499</p>
+                        <p class="p2"><b>₹299</b></p>
+                        <i onclick="showDetails('product6')" class="fa-regular fa-eye product"></i>
+                        <i class="fa-solid fa-cart-plus add-to-cart"></i>
+                    </div>
+                </div>
+                <div class="btn-container view-all-btn">
+                    <button class="btn"><a href="nursery.html">view all</a></button>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-box">
+                    <h4>contact</h4>
+                    <li><a href="#"><i class="fa-solid fa-envelope"></i> greenleaf@mail.com</a></li>
+                    <li><a href="#"><i class="fa-solid fa-phone"></i> +91 0123456789</a></li>
+                </div>
+                <div class="footer-box">
+                    <h4>social</h4>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i> &nbsp;Facebook</a></li>
+                </div>
+                <div class="footer-box">
+                    <h4>info</h4>
+                    <li><a href="signup.html"><i class="fa-solid fa-user"></i> Account</a></li>
+                    <li><a href="nursery.html"><i class="fa-solid fa-tree"></i> Nursery</a></li>
+                </div>
+            </div>
+            <div class="footer-last-box">
+                <h3>&copy; greenleaf 2024</h3>
+            </div>
+        </footer>
+
+        <!-- pop menu for cart-items -->
+        <div id="cart-modal" class="pop-up">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3><i class="fa-solid fa-leaf"></i> GreenLeaf</h3>
+                <h2>your cart</h2>
+                <div id="cart-items" class="cards-items-box"></div>
+                <button id="clear-cart" class="clear-btn btn">Clear Cart</button>
+            </div>
+        </div>
+
+        <!-- pop menu for money plant -->
+        <div id="product1" class="pop-up">
+            <div class="pop-up-box" data-id="1">
+                <div class="pop-up-box-img">
+                    <img src="image/money-plant.webp">
+                </div>
+                <div class="pop-up-box-text">
+                    <h2>money plant</h2>
+                    <p class="p1">₹249</p>
+                    <p class="p2"><b>₹189</b></p>
+                    <button class="btn add-to-cart"><a href="#">add to cart</a></button>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i> 
+                        free shipping
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        cash on delivery
+                    </li>
+                    <h4>description</h4>
+                    <p><b>Common Name: </b>Money plant, Pothos</p>
+                    <p><b>Appearance: </b>Attractive heart-shaped leaves</p>
+                    <p><b>Care: </b>Low-maintenance and adaptable to various environments</p>
+                    <p><b>Ideal for: </b> Beginners</p>
+                    <p><b>Beliefs: </b> Bring good luck & prosperity to the home</p>
+                    <h3><i class="fa-solid fa-leaf"></i> GreenLeaf</h3>
+                </div>
+                <span onclick="hideDetails('product1')" class="close">&times;</span>
+            </div>
+        </div>
+        <!-- pop menu for snake plant -->
+        <div id="product2" class="pop-up" data-id="2">
+            <div class="pop-up-box">
+                <div class="pop-up-box-img">
+                    <img src="image/snake-plant.webp">
+                </div>
+                <div class="pop-up-box-text">
+                    <h2>snake plant</h2>
+                    <p class="p1">₹289</p>
+                    <p class="p2"><b>₹179</b></p>
+                    <button class="btn add-to-cart"><a href="#">add to cart</a></button>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i> 
+                        free shipping
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        cash on delivery
+                    </li>
+                    <h4>description</h4>
+                    <p><b>Common Name: </b>Snake Plant</p>
+                    <p><b>Appearance: </b>Tall, upright leaves with distinctive green and yellow stripes</p>
+                    <p><b>Care: </b>Low-maintenance, Thrives in low light and minimal watering</p>
+                    <p><b>Ideal for: </b> Beginners</p>
+                    <p><b>Beliefs: </b> Bring good luck & prosperity to the home</p>
+                    <h3><i class="fa-solid fa-leaf"></i> GreenLeaf</h3>
+                </div>
+                <span onclick="hideDetails('product2')" class="close">&times;</span>
+            </div>
+        </div>
+        <!-- pop menu for aleo vera plant -->
+        <div id="product3" class="pop-up" data-id="3">
+            <div class="pop-up-box">
+                <div class="pop-up-box-img">
+                    <img src="image/aleo-vera-plants.webp">
+                </div>
+                <div class="pop-up-box-text">
+                    <h2>aleo vera plant</h2>
+                    <p class="p1">₹249</p>
+                    <p class="p2"><b>₹159</b></p>
+                    <button class="btn add-to-cart"><a href="#">add to cart</a></button>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i> 
+                        free shipping
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        cash on delivery
+                    </li>
+                    <h4>description</h4>
+                    <p><b>Common Name: </b>Aleo Vera plant</p>
+                    <p><b>Appearance: </b>Succulent plant with thick, fleshy leaves</p>
+                    <p><b>Care: </b>Low-maintenance, Requires bright, indirect sunlight and minimal watering</p>
+                    <p><b>Ideal for: </b> Beginners</p>
+                    <p><b>Beliefs: </b> Bring good luck & prosperity to the home</p>
+                    <h3><i class="fa-solid fa-leaf"></i> GreenLeaf</h3>
+                </div>
+                <span onclick="hideDetails('product3')" class="close">&times;</span>
+            </div>
+        </div>
+        <!-- pop menu for ZZ plant -->
+        <div id="product4" class="pop-up" data-id="4">
+            <div class="pop-up-box">
+                <div class="pop-up-box-img">
+                    <img src="image/zz-plant.webp">
+                </div>
+                <div class="pop-up-box-text">
+                    <h2>ZZ plant</h2>
+                    <p class="p1">₹499</p>
+                    <p class="p2"><b>₹299</b></p>
+                    <button class="btn add-to-cart"><a href="#">add to cart</a></button>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i> 
+                        free shipping
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        cash on delivery
+                    </li>
+                    <h4>description</h4>
+                    <p><b>Common Name: </b>ZZ plant, Zomia plant</p>
+                    <p><b>Appearance: </b>Hardy plant with waxy, dark green leavess</p>
+                    <p><b>Care: </b>Low-maintenance, Thrives in neglect</p>
+                    <p><b>Ideal for: </b> Beginners</p>
+                    <p><b>Beliefs: </b> Bring good luck & prosperity to the home</p>
+                    <h3><i class="fa-solid fa-leaf"></i> GreenLeaf</h3>
+                </div>
+                <span onclick="hideDetails('product4')" class="close">&times;</span>
+            </div>
+        </div>
+        <!-- pop menu for spider-plant -->
+        <div id="product5" class="pop-up" data-id="5">
+            <div class="pop-up-box">
+                <div class="pop-up-box-img">
+                    <img src="image/spider-plant.webp">
+                </div>
+                <div class="pop-up-box-text">
+                    <h2>spider plant</h2>
+                    <p class="p1">₹349</p>
+                    <p class="p2"><b>₹269</b></p>
+                    <button class="btn add-to-cart"><a href="#">add to cart</a></button>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i> 
+                        free shipping
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        cash on delivery
+                    </li>
+                    <h4>description</h4>
+                    <p><b>Common Name: </b>Spider-Plant</p>
+                    <p><b>Appearance: </b>Graceful, arching leaves with white stripes</p>
+                    <p><b>Care: </b>Low-maintenance, Thrives in indirect sunlight and well-drained soil</p>
+                    <p><b>Ideal for: </b> Beginners</p>
+                    <p><b>Beliefs: </b> Bring good luck & prosperity to the home</p>
+                    <h3><i class="fa-solid fa-leaf"></i> GreenLeaf</h3>
+                </div>
+                <span onclick="hideDetails('product5')" class="close">&times;</span>
+            </div>
+        </div>
+        <!-- pop menu for jade plant -->
+        <div id="product6" class="pop-up" data-id="6">
+            <div class="pop-up-box">
+                <div class="pop-up-box-img">
+                    <img src="image/jade-plant.webp">
+                </div>
+                <div class="pop-up-box-text">
+                    <h2>jade plant</h2>
+                    <p class="p1">₹499</p>
+                    <p class="p2"><b>₹299</b></p>
+                    <button class="btn add-to-cart"><a href="#">add to cart</a></button>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i> 
+                        free shipping
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        cash on delivery
+                    </li>
+                    <h4>description</h4>
+                    <p><b>Common Name: </b>Jade Plant</p>
+                    <p><b>Appearance: </b>Succulent with thick, fleshy leaves</p>
+                    <p><b>Care: </b>Low-maintenance, Prefers bright, indirect sunlight</p>
+                    <p><b>Ideal for: </b> Beginners</p>
+                    <p><b>Beliefs: </b> Symbolizes prosperity and luck</p>
+                    <h3><i class="fa-solid fa-leaf"></i> GreenLeaf</h3>
+                </div>
+                <span onclick="hideDetails('product6')" class="close">&times;</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
